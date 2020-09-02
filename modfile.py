@@ -17,7 +17,7 @@ class ModFileCreator():
 		with open(os.path.join(dPath, modid + ".mod"), "w+b") as f:
 
 			modid = int(modid)
-			f.write(struct.pack('ixxxx', modid))  # Needs 4 pad bits
+			f.write(struct.pack('Ixxxx', modid))  # Needs 4 pad bits
 			self.write_ue4_string("ModName", f)
 			self.write_ue4_string("", f)
 
